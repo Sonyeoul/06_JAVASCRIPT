@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>03. class 를 이용한 요소 노드 취득</h1>
+    <p>
+        document.getElemetsByClassNmae("클래스 이름")
+        메소드는 인수로 전달한 class 속성 값을 갖는
+        모든 요소 노드들을 탐색하여 반환한다.
+    </p>
+    <ul id="available">
+        <li class="drink Coffee">커피</li>
+        <li class="drink cocke">코크</li>
+        <li class="drink milk">밀크</li>
+    </ul>
+    <ul id="unavailable">
+        <li class ="drink soju">소주</li>
+        <li class = "drink beer">맥주</li>
+    </ul>
+    <script>
+        const $drink = document.getElementsByClassName('drink');
+        console.log($drink);
+
+    </script>
+</body>
+</html>

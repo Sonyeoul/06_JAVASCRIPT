@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>02. 태그 이름을 이용한 요소 노드 획득</h1>
+    <p>
+        Document.getElementByTagName('태그');
+        메소드는 인수로 전달한 태그 이름을 갖는 모든 요소 노드를
+        탐색하여 반환한다
+        메소드 이름의 Elements가 복수형인 것에서 알 수 있듯
+        여러 개의 요소 노드 객체를 갖는다.
+    </p>
+    <ul id="food">
+        <li>김찌</li>
+        <li>된찌</li>
+        <li>고등어구이</li>
+    </ul>
+    <ul id="drink">
+        <li>커피</li>
+        <li class="li">코크</li>
+        <li class="li">밀크</li>
+    </ul>
+    <script>
+        const $lists = document.getElementsByTagName("li");
+        $lists[0].innerText="짬뽕찌개";
+        $lists[0].style.color="red";
+
+        let changeColor =0;
+        for(let i=0;i<$lists.length;i++){
+            $lists[i].style.backgroundColor="rgb(30,120,"+changeColor+")";
+            changeColor += 50;
+        }
+        [...$lists].forEach(list => list.style.color="red");
+        const $drink = document.getElementById("drink");
+        const $lists2 = $drink.getElementsByClassName("li");
+        [...$lists2].forEach(list => list.style.color="gray");
+    </script>
+</body>
+</html>
