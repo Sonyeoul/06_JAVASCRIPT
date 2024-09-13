@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 노드
+     DOM에서 문서 구조의 기본 단위를 나타낸다
+     요소 노드 = html 태그들
+     속성 노드 = html 요소의 속성들
+     텍스트 노드 = html 요소 내의 실제 텍스트 내용
+     주석 노드 - html 노드 -->
+     <h1>01 자식 노드 탐색</h1>
+
+    
+     <h3>노드 탐색</h3>
+     <p>
+        요소 노드 취득 후 취득 요소 기점으로 dom 트리의 노드를 옮겨 다니며
+        부모, 형제, 자식노드 등을 탐색해야 할 때가 있다.
+        
+     </p>
+
+     <h3>자식노드 탐색</h3>
+     <ol id= "node">
+        <li>node.childNodes :
+            자식 노드를 탐색하여 nodelist 에 담아 반환
+        </li>
+        <li>
+            node.fitstChild :
+            첫번째 자식 노드
+        </li>
+        <li>node.lastchild
+            마지막 자식 노드
+        </li>
+     </ol>
+     <script>
+        const $node = document.getElementById("node");
+        console.log($node.childNodes);
+        console.log($node.firstChild);
+        console.log($node.lastChild);
+     </script>
+
+     <ol id="element">
+        <li>elemet.children :
+            자식 노드 중 요소 노드만 탐색하여 htmlCollection에 담아 반환
+        </li>
+        <li>element.firstChild :
+            첫 번째 자식 요소 노드 반환
+        </li>
+        <li>element.lastElementChild :
+            마지막 자식 요소 노드 반환
+        </li>
+     </ol>
+     <script>
+        const $element = document.getElementById("element");
+        console.log($element.children);
+        console.log($element.firstElementChild);
+        console.log($element.lastElementChild);
+     </script>
+</body>
+</html>

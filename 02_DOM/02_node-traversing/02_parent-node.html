@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>02. 부모 노드 탐색</h1>
+    <p>
+        부모 노드를 탐색하려면 node.parentNode
+        텍스트 노드는 dom 트리의 최종단 노드 이므로
+        부모가 텍스트 노드인 경우는 없다
+    </p>
+    <script>
+        console.log("=======head");
+        console.log(document.head);
+        console.log("=======body");
+        console.log(document.body);
+        console.log("=======head의 parent");
+        console.log(document.head.parentNode);
+        console.log("=======body의 parent");
+        console.log(document.body.parentNode);
+    </script>
+    <ul id="lists">
+        <li class="Coffee">커피</li>
+        <li class="coke">코크</li>
+        <li class="milk">밀크</li>
+    </ul>
+    <script>
+        const $coke = document.querySelector(".coke");
+        console.log($coke.parentNode);
+        console.log($coke.parentElement);
+    </script>
+</body>
+</html>

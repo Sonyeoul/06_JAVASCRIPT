@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>01. 노드 정보 취득</h1>
+    <p>
+        node.nedetype:
+        노드 객체의 종류, 즉 노드 타입을 나타내는 상수를 반환한다
+
+        Element-node : 요소 노드 타입 - 1반환
+        Text-node : 텍스트 노드 타입 - 3반환
+        document-node : 문서 노드 타입 - 9반환
+
+        node.nodeName:
+        노드의 이름을 문자열로 반환
+        요소 노드 : 태그 이름을 반환
+        텍스트 노드 : 문자열 #text 반환
+        문서 노드 : 문자열 #document 반환
+    </p>
+    <div id="area">
+        노드 정보 취득
+    </div>
+    <script>
+        console.log(document.nodeType);
+        console.log(document.nodeName);
+
+        const $area = document.getElementById("area");
+        console.log($area.nodeType);
+        console.log($area.nodeName);
+
+        const {firstChild} = $area;
+        console.log(firstChild.nodeType);
+        console.log(firstChild.nodeName);
+    </script>
+</body>
+</html>

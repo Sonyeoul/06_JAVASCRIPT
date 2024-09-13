@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>03.형제 노드</h1>
+    <ol id="node">
+        <li>node.previousSibling:
+            형제 노드 중 자신의 이전 형제 노드를탐색하여 반환
+        </li>
+        <li>node.nextSilbling :
+            형제 노드 중 자신의 다음 형제 노드를 탐색하여 반환
+        </li>
+    </ol>
+    <script>
+        const $node = document.getElementById("node");
+
+        const{firstChild} = $node;
+        console.log(firstChild);
+
+        const{firstElementChild} = $node;
+        console.log(firstElementChild)
+        const{previousSiling} = nextSibling;
+        console.log(previousSiling);
+    </script>
+</body>
+</html>
